@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Family;
 use App\Models\Place;
+use App\Models\User;
 use Illuminate\Http\Request;
+
 
 class FamilyController extends Controller
 {
@@ -156,6 +158,6 @@ class FamilyController extends Controller
     {
 
         $families = Family::onlyTrashed()->get();
-        return view('families.trashed', compact('families'));
+        return view('families.trashed');
     }
 }
